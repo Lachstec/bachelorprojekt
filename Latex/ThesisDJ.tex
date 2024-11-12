@@ -70,8 +70,8 @@
     \vspace*{\stretch{1}}
 
     \large Matrikelnummer:  #4 \\[1mm]
-    \large Betreuer:  #7 \\[1mm]
-    \large Zweitgutachter:  #8 \\[1mm]
+    \large Dozent:  #7 \\[1mm]
+    \large Fachbetreuer:  #8 \\[1mm]
 
     \vspace*{\stretch{1}}
     \large Eingereicht am #6
@@ -88,14 +88,14 @@
 \begin{document}
 \makeatletter
   \HSFTitle
-      {Sehr langer und ausführlicher Titel der Arbeit unter Einbeziehung aller relevanten Aspekte }        % Titel der Arbeit
-      {Bachelorarbeit} % Typ der Arbeit
-      {Vorname Nachname}          % Vor- und Nachname des Autors
-      {Matrikelnummer}
+      {Projektmanagement: Maßnahmen zur Optimierung der Nachrichtenverteilung in Gruppen und Organisationseinheiten }        % Titel der Arbeit
+      {Hausarbeit} % Typ der Arbeit
+      {Nicolas Will, Julian Dreuth, Leon Lux}          % Vor- und Nachname des Autors
+      {?, ?, 1420067}
       {Fachbereich AI}  % Name des FBs
-      {dd.mm.yyyy}        % Tag der Abgabe
-      {Erstgutachter}     % Name des Erstgutachters
-      {Zweitgutachter}    % Name des Zweitgutachters
+      {12.11.2024}        % Tag der Abgabe
+      {Frank Breitenbach}     % Name des Erstgutachters
+      {Daniel Brenzel}    % Name des Zweitgutachters
   \clearpage
 
 \lhead{}
@@ -110,11 +110,16 @@
 \markboth{Abstract}{Abstract}
 \section*{Abstract}
 
-Das Abstract fasst die wesentlichen Inhalte Ihrer Thesis zusammen,
-ohne diese zu werten oder zu interpretieren. Es hilft dem Leser dabei, sich einen groben Überblick
-über Ihre Fragestellung, Ihr Vorgehen und Ihre zentralen Ergebnisse zu verschaffen. Bei
-wissenschaftlichen Artikeln entscheidet der Leser anhand dieses präzisen Kurztexts oft darüber, ob er
-den ganzen Beitrag liest oder nicht. Das Abstract beschreibt wichtige Hintergrundinformationen wie die Ausgangslage und die Fragestellung der Thesis.
+Die folgende Arbeit beschäftigt sich mit der Anwendung von im Modul AI1021 erlernten Techniken des Projektmanagements anhand eines Projektes im 
+Bereich J3 der Hessischen Zentrale für Datenverarbeitung (HZD). Ziel ist die Analyse und Optimierung der bereichsinternen Kommunikation mit dem Ziel, 
+eine neue Messenging-Lösung zu finden, die bisher verwendete Lösungen ersetzen kann. Die schriftliche Ausarbeitung legt dabei ihren Fokus auf 
+das Projektmanagement und Projektcontrolling. Dazu werden im Folgenden die durchlaufenen Phasen des Projektes dokumentiert und evaluiert, um als 
+abschließenden Schritt gewonnene Erkenntnisse aufzuzeigen sowie ein Fazit zu ziehen.
+
+\markboth{Sperrvermerk}{Sperrvermerk}
+\section*{Sperrvermerk}
+Die vorliegende Arbeit enthält Interna der HZD und ist daher streng vertraulich zu behandeln. Sie ist ausschließlich als Prüfungsvorlage bestimmt und weder
+fremden Dritten zugänglich gemacht, noch ohne Einverständnisse der HZD vervielfältigt werden.
 
 
 \clearpage
@@ -140,175 +145,17 @@ den ganzen Beitrag liest oder nicht. Das Abstract beschreibt wichtige Hintergrun
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%  Hauptteil  %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Einleitung}
 
-\section{Einleitung} \label{sec:einleitung}
-Generell soll die Einleitung \textbf{SEHR} ausführlich und pädagogisch anspruchsvoll gestaltet sein! Das ist ein wesentlicher Teil der Note, 8 Seiten sind hier nicht zuviel!!
-Bilder, Diagrame, alles was hier für mehr Klarheit sorgt ist explizit erlaubt!
-%
-\subsection{Kontext}
-In welchem Kontext ist der Gegenstand der Arbeit eingebettet? Bei einer Arbeit in einer Firma würde man hier zunächst mal die Firma vorstellen, danach das grobe Problemgebiet...
-%
-\subsection{Problemstellung und Motivation}
-Danach kommt die Beschreibung des Problems das durch die Arbeit gelöst wird oder werden soll. Damit verbunden erfolgt die Darstellung der Motivation bzw Dringlichkeit eine Lösung zu finden. 
-%
-\subsection{Ziele der Arbeit}\label{sec:ziele}
-Im Anschluss werden die Ziele dargelegt. Diese Punkte sollen so formuliert sein dass sie sich quantitativ überprüfen lassen, also durch Use-Cases, Experimente, etc.
-%
-\subsection{Forschungsstand}
-\label{sec:relwork}
-Hier werden Arbeiten genannt die die selben oder ähnliche Ziele haben. Die Arbeiten müssen nur genannt werden, plus eine kurze Erläuterung in wie weit sich deren Ziele von den Zielen der eigenen Arbeit unterscheiden/gleichen. Hier soll NICHT gewertet werden, das passiert ggf. in der Diskussion.
+\section{Projektinitiierung}
 
-Zulässige Arbeiten sind, in absteigender Reihenfolge:
-\begin{itemize}
-\item Wissenschaftliche Veröffentlichungen mit Peer Review, idealerweise mit DOI. Findet man sehr leicht auf Google Scholar. Google Scholar kann auch einen BibTeX-Eintrag exportieren den man direkt ins .bib-File reinkopieren kann.
-\item White Papers bzw öffentlich zugängliche Dokumente ohne Peer Review. Kann man nur per URL zitieren. Solche PDFs/Dokumente müssen in digitaler Form mit eingereicht werden. Immer klar machen wann das archivierte PDF runtergeladen wurde (Datum)!
-\item Webseiten, v.a. wenn man sich auf Software-Pakete bezieht. Auch nur per URL zitierbar, GitHub-Link bei Open Source-Projekten ist auch ok. Muss nicht archiviert werden, die URL genügt. Solche Quellen nur zitieren wenn es nicht anders geht!
-\end{itemize}
+\section{Planungsphase}
 
-Generell zitiert man Literatur oder URLs so: wie in \cite{kimball2011data} gezeigt, blablaba. Siehe auch Kap.~\ref{sec:zitate}, \ref{sec:webquellen}. Oder: \cite{katsifodimos2016apache} verfolgt ähnliche Ziele im Bereich der pervertierten Integralrechnung, ohne aber den Aspekt der invertierten Kupidität genauer zu betrachten. Oder: In \cite{clemen1989combining} wird eine Untersuchung zur diagonal faktorisierten Matrix-Perversion präsentiert. Seitenzahlen können, müssen aber i.d.R. nicht angegeben werden.
+\section{Projektdurchführung und Controlling}
 
-\subsection{Eigenleistung}
-Hier wird kurz, idealerweise als Bullet-Liste, aufgezählt was Sie konkret selbst für die Arbeit geleistet haben. Also:
-\begin{itemize}
-    \item Entwicklung eines Skripts zur Löschung aller Daten auf Hochschul-Servern
-    \item Literaturvergleich von nicht funktionsfähigen und funktionsfähigen Lösungen zur Matrix-Perversion
-    \item Implementierung eines Web-Severs zur Speicherung und Abfrage von zweifelhaften Mathematiker-Witzen
-\end{itemize}
+\section{Projektabschluss}
 
 
-\subsection{Struktur der Arbeit}
-In diesem Abschnitte beschreiben Sie kurz die Struktur ihrer Arbeit.
-Sie beschreiben grob, was Inhalt jedes Kapitels ist. Hier reicht ein Satz pro Kapitel.
-
-\section{Grundlagen}\label{sec:grundlagen}
-Zielgruppe: Informatiker mit Bachelor. Erläuterung der methodischen Grundlagen die
-über das hinausgehen was diese Zielgruppe üblicherweise ohne nachzudenken wissen kann.
-Beispiele:
-\begin{itemize}
-\item Erläuterung spezialisierter Bibliotheken und ihrere Benutzung.
-\item Erläuterung komplexerer Konzepte in der gewählten Programmiersprache
-\item Erläuterung des Konzepts der maschinellen Lernens und neuronaler Netze, wenn die Arbeit solche Techniken benutzt
-\item Beschreibung der verwendeten Datenbanken oder Datensätze
-\end{itemize}
-%
-Ziel ist, sich auf dieses Kapitel und Unterkapitel in den folgenden Kapiteln beziehen zu können, damit man dort nicht immer alles nochmal erläutern muss. Also: hier kommen nur Sahcne rein die auch wirklich notwendig sind für das Verständnis der Umsetzung und der Exerimente.
-\subsection{Grundlagenthema 1}\label{sec:grundlagen1}
-\subsection{Grundlagenthema 2}\label{sec:grundlagen2}
-\subsection{Grundlagenthema 3}\label{sec:grundlagen3}
-%
-\section{Umsetzung}\label{sec:umsetzung}
-Sollte sich auf das vorhergehende Kapitel beziehen, also etwa so:
-Die Eingenwert-Zerlegung der Matrix $\Sigma$ wird wie in Kap.~\ref{sec:grundlagen1} beschreiben durchgeführt, wobei die lapack-Bibliothek (siehe Kap.~\ref{sec:grundlagen2}) benutzt wird.
-
-Für Software-Entwicklung: Was wurde implementiert, selbst oder nur teilweise selbst? Was ist die Ablauf-Logik des Codes (Blockschaltbilder sind hier gut, auch UML-Diagramme sind gerne gesehen).
-
-Code-Snippets nur wenn Sie kleiner seind als 1/4 Seite, und dann auch nur wenn es unbedingt sein muss.
-Längere Snippets in den Anhang packen und darauf so verweisen: siehe App. \ref{Snippet}.
-
-\section{Experimente}\label{sec:exp}
-Belegt dass die Ziele aus der Einleitung erreicht werden. Für jedes Ziel sollte mindestens ein Experiment existieren. Das können Screenshots, Fotos, Diagramme, Ergebnisse etc. sein. Das hängt vom Ziel ab.
-
-\section{Diskussion}
-Greift die Ziele (siehe \ref{sec:ziele}) und die Experimente (siehe \ref{sec:exp}) auf und erläutert was erreicht wurde und was nicht, und warum nicht falls das der Fall ist. Vergleicht die erzielten Ergebnisse auch mit dem Forschungsstand aus Kap.~\ref{sec:relwork}. Zieht ein Fazit der gesamten Arbeit.
-
-\section{Ausblick und Schluss}
-Zusammenfassung (\textit{executive summary} für Entscheider). Ausblick: Was würde man tun wenn man noch 3 Monate Zeit hätte? Was wurde nicht geschafft, wäre aber sinnvoll? Wo könnte man noch tiefer gehen? Das können durchaus 2-3 Seiten sein, dieses Kapitel ist wichtig weil manche Leute nur Einleitung und Schluss lesen!
-
-\section{Formale Aspekte , dieses Kapitel kommt in der Arbeit natürlich raus}
-%
-\subsection{Mathematische Gleichungen}
-Eine mehrzeilige Gleichung sieht so aus (die Symbole nach den und-Zeichen werden untereinander gesetzt). Die nonmber-Befehle verhindern dass die Gleichung nummertiert wird (Geschmackssache, ist nie falsch wenn eine Gleichung nummeriert ist). Aber: eine Gleichung auf die man refernziert (also die ein Label hat), muss nummeriert sein!
-\begin{align}
-    A &= \sum_{i=1}^N x_i \label{eq:1}\nonumber\\
-    B &= \frac{\pi}{2}
-\end{align}
-
-Eine inline-Gleichung: $x=45b + \frac{2}{3}\pi$. Der Text geht weiter! Auf inline-Gleichungen kann man keine Refernzen erstellen.
-
-\subsection{Das ist eine Auflistung}
-\begin{enumerate}
-\item Element 1
-\item Element 2
-\end{enumerate}
-
-\subsection{Das ist eine Bullet-Liste}
-\begin{itemize}
-\item Element 1
-\item Element 2
-\end{itemize}
-
-
-\subsection{Eine Grafik bindet man so ein}
-Zulässige Formate sind generell eps, pdf und png.
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.8\textwidth]{logo.pdf}
-    \caption{Logo der HAW Fulda}
-    \label{fig:bildchen}
-\end{figure}
-
-\subsection{So schreibt man einen Algorithmus}
-
-\begin{algorithm}[H]
- \KwData{this text}
- \KwResult{how to write algorithm }
- initialization\;
- \While{not at end of this document}{
-  read current\;
-  \eIf{understand}{
-   go to next section\;
-   current section becomes this one\;
-   }{
-   go back to the beginning of current section\;
-  }
- }
- \caption{How to write algorithms\label{alg:dummy}
- }
-\end{algorithm}
-
-\subsection{So gestaltet man eine Tabelle}
-
-\begin{table}[H]
-\caption{Beispielstabelle\label{tab:beispiel}
-}
-\centering
-\begin{tabular}{llr}
-\hline
-A    & B & C \\
-\hline
-D      & per gram    & 11.65      \\
-          & each        & 1.01       \\
-E       & stuffed     & 32.54      \\
-F       & stuffed     & 73.23      \\
-G & frozen      & 8.39       \\
-\hline
-\end{tabular}
-\end{table}
-
-
-\subsection{Interne Referenzen}
-So wird ein Kapitel oder Unterkapitel referenziert: Kap.~\ref{sec:einleitung},
-Kap.~\ref{sec:webquellen}. Auf Gleichungen bezieht man sich so: Wie in Gl.~(\ref{eq:1}) gezeigt,
-sehen Gleichungen in der Regel gut aus. Auf Abb.~\ref{fig:bildchen} bezieht man sich so. Auf
-Tab.~\ref{tab:beispiel} referenziert man so. Algorithmen sind analog: siehe Alg.~\ref{alg:dummy}.
-Generell kann man alles zitieren was ein Label hat.
-
-
-\subsection{Textformatierung}
-\textbf{So wird dick geschrieben} und \textit{so kursiv}.
-
-\subsection{Zitieren}\label{sec:zitate}
-Generell zitiert man so: wie in \cite{clemen1989combining} gezeigt, blablaba. Für jedes zitierte Werk ist ein BibTex-Eintrag nötig! Eine gute Quelle ist Google Scholar!!
-
-\subsection{Webquellen zitieren}\label{sec:webquellen}
-So wird eine Webquelle zitiert: \cite{shiny1}, siehe auch den Eintag im BibTeX-File.
-Wichtig: für jede Web-Quelle ein BibTeX-Eintrag! Wenn Sie das auf die hier gezeigte Art machen, werden URLs (fast) automatisch getrennt. Kontrollieren Sie trotztdem die Literaturliste, es kann sein dass das nicht immer funktioniert.
-
-\subsection{Literaturverzichnis erstellen}
-Hierzu müssen BibTeX-Einträge in die Datei literatur.bib eingefügt werden. Die BibTeX-Keys sind jeweils Argumente für die cite-Kommandos! Wenn Sie literatur.bib ändern müssen Sie alles mindestens 5x compilieren: 3x mit latex, 1x mit BibTex und dann noch 2x mit LaTeX (in der Reihengfolge). Am besten Sie machen ein Skript dafür!
-
-\subsection{Erstellung eines PDFs im PDF-A Format}
-Durch Einbinden geeigneter Packages (pdfx) wird diese Vorlage bereits als PDF-A erzeugt. Sie sollten allerdings die Metadaten in der Datei main.xmpdata anpassen!
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Literaturverzeichnis wird
@@ -322,37 +169,6 @@ Durch Einbinden geeigneter Packages (pdfx) wird diese Vorlage bereits als PDF-A 
 %\printbibliography
 %\addcontentsline{toc}{section}{\bibname}
 \appendix
-\section{Code Snippets}
-\begin{figure}
-    \centering
-    %\includegraphics{s}
-    \caption{Normalerweise bindet man Snippets als Bilder ein...\label{Snippet}
-    }
-\end{figure}
-
-\section{Hinweise zum Kolloquium}
-Das Kolloquium besteht aus 20 Minuten Präsentation gefolgt von ca 20 Minuten Fragen zur Arbeit und Diskussion. Anwesend sind mindestens die beiden Gutachter, Dritte können ohne weitere Anmeldung ebenfalls dabei sein (Kolloquien sind öffentlich). 
-
-Zielgruppe sollen Laien (z.B. höheres Management) sein, nicht die beiden Gutachter. Das bedeutet dass mindestens ein Drittel der Präsentation aus Motivation und Kontext besteht. Hier kann sich stark an die Einleitung der Arbeit angelehnt werden. Viele Bilder helfen ebenfalls, können aus der Arbeit sein.
-
-Maximal soll die Präsentation 20 Slides enthalten (also maximal 1 Slide pro Minute). Es können zusätzliche Slides mit Details erstellt werden die vermutlich in der Diskussion sowieso gefragt werden.
-
-Das Kolloquium ist nicht benotet, dh. es gibt nur bestanden oder nicht bestanden als Ergebnis. 
-
-Generell sind die Studierenden verantwortlich für die Terminfindung und sollen nach Einreichung der Arbeit selbst aktiv werden. 
-
-Tipps:
-\begin{itemize}
-    \item langsam sprechen! Laut sprechen!
-    \item Unter Zeitdruck lieber ganze Folien weglassen als schneller sprechen
-    \item Folien nummerieren
-    \item Bitte unbedingt 15min vor dem Termin Hardware (Beamer, Headset, Kamera) testen. Das macht einen extrem schlechten Eindruck wenn dadurch Verzögerung entsteht
-    \item niemals nur den Text der Folien vorlesen. Folien sollen sehr wenig Text und viele Bilder haben. Text soll nur Stichpunkte angeben, der Rest wird frei formuliert
-    \item Kolloquien können ohne Weiteres online stattfinden!
-    \item bei physischen Terminen: immer einen USB-Stick mit der Präsentation als PDF dabeihaben falls man einen anderen PC nutzen muss. PDF geht überall, PowerPoint nicht (und sieht v.a. nicht überall gleich aus)
-    \item Totales No-Go: Rechtschreibfehler auf Folien
-    \item Vermeiden Sie aufwändige Animationen oder Videos wenn möglich, kann immer sein dass das nicht funktioniert
-\end{itemize}
 
 
 \end{document}
