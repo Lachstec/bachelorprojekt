@@ -3,18 +3,53 @@
 \begin{document}
 	Das Projekt zur Evaluation verschiedener Softwarelösungen zur Verbesserung der Kommunikation innerhalb von Teams bzw. Verfahren im Bereich J3 wird zwar im Bereich J3 durchgeführt, hängt aber von keinem der existierenden Projekte, Verfahren oder auch Personen insofern ab, als dass sie direkt als Projektmitarbeiter in das Projekt involviert sind. Somit besteht für die Wahl der Arbeitsweise freie Hand und es ist dem Projektteam überlassen, eine passende Arbeitsweise auszuwählen und in der Folge anzuwenden.\\
 	Da der Projektauftrag klar definiert und die zur Verfügung stehende Arbeitszeit durch die Laufzeit stark begrenzt ist, wird weitestgehend traditionell gearbeitet, wobei allerdings Änderungen bzw. weitere notwendige Arbeit nach Bedarf auch nachträglich in die Planung eingebracht werden kann, ohne alle Planungsschritte erneut zu durchlaufen. Einzelne Arbeitsschritte können aber auch agil bearbeitet werden, wenn dies für die Durchführung des Arbeitsschrittes voraussichtlich förderlich ist. Zudem werden einige Werkzeuge, wie beispielswiese ein Kanban-Board, verwendet, welche eher dem agilen Projekmanagement zuzuordnen sind. In diesem Sinne kann die Arbeitsweise in diesem Projekt
-	als hybrides Projektmanagement bezeichnet werden \cite{Kuster2022}
+	als hybrides Projektmanagement bezeichnet werden
 	
-	\subsection{Projektbewertung und -beschreibung}
-	Die Zusammenarbeit innerhalb und zwischen Teams im Bereich J3, insbesondere zwischen Mitarbeitern im Büro und Mitarbeitern, die per mobilem Arbeiten von Zuhause arbeiten findet aktuell über eine Vielzahl verschiedener Plattformen statt. Zur direkten Kommunikation werden entweder Mails über Microsoft Outlook oder Nachrichten und Sprachanrufe über Skype eingesetzt, ganze Teams können dabei über die dem Team zugeordneten Mail-Postfächer direkt gesammelt angesprochen werden. Ebenso findet Skype Anwendung bei der Durchführung von Videokonferenzen. Tickets und Changes werden mittels Remedy erstellt und bearbeitet. In Projekt-Teams wird zur Planung und Durchführung Azure DevOps verwendet. \\
-	Diese Vielzahl an eingesetzten Programmen bringt Herausforderungen in der Koordination mit sich im Hinblick auf Aufgabenverteilung, Absprache und Abstimmung von Resultaten verschiedener Arbeitspakete, die sich nicht unter Einsatz der bereits verwendeten Programme lösen lässt.
-	Gesucht wird also ein Programm, das eine Schnittstelle zwischen den bereits eingesetzten Tools darstellt und gleichzeitig eine gut strukturierbare Möglichkeit zur Kommunikation innerhalb eines Teams sowie teamübergreifend bietet, so dass sich die Zusammenführung der eingesetzten Programme effizienzsteigernd auswirkt.
+  \subsection{Ausgangslage}
+  Die HZD nutzt derzeit eine Mischung aus Skype for Business, E-Mails und der Aufgabenverwaltung in Microsoft Azure DevOps zur Kommunikation \cite{microsoft_azure_nodate}. 
+  Dabei treten mehrere Herausforderungen auf, die die Effizienz und Übersichtlichkeit der Kommunikation beeinträchtigen:
+
+  \begin{enumerate}
+    \item \emph{Mangelnde Abbildung paralleler Projekte}: Mitarbeiterinnen und Mitarbeiter der Abteilung J3 sind häufig in mehreren Projekten gleichzeitig tätig. Die vorhandenen Kommunikationskanäle unterstützen diese Anforderungen nur unzureichend.
+    \item \emph{Redundanz im Informationsfluss}: Nachrichten aus Azure DevOps werden zusätzlich per E-Mail an die betroffenen Personen weitergeleitet. Dadurch entsteht eine Dopplung von Informationen, was die Unterscheidung neuer Inhalte von bereits gelesenen erschwert.
+    \item \emph{Unübersichtlichkeit durch getrennte Kommunikationswege}: Skype for Business wird primär für schnelle Nachrichten verwendet. Während die schnelle Reaktionszeit geschätzt wird, empfinden viele Mitarbeitende den separaten Kommunikationskanal als unübersichtlich.
+  \end{enumerate}
+
+  Neben der textbasierten Kommunikation wird auch Skype for Business für Videokonferenzen verwendet, insbesondere im Homeoffice oder bei 
+  der Zusammenarbeit mit externen Stakeholdern. Dabei ergeben sich weitere Probleme:
+
+  \begin{itemize}
+    \item Externe Stakeholder haben oft Schwierigkeiten, an Meetings teilzunehmen, da ein Skype-for-Business-Account erforderlich ist.
+    \item Meeting-Einladungen müssen per E-Mail verschickt werden; eine Einladung über den Chat ist nicht möglich.
+  \end{itemize}
+
+  Auf Basis dieser Beobachtungen und Schilderungen aus der Praxis lassen sich die zu lösenden Probleme wie folgt zusammenfassen:
+
+  \begin{enumerate}
+    \item Es gibt zu viele unabhängige Kommunikationswege innerhalb von Projekten
+    \item exteren Stakeholder können nicht effizient in die Prozesse eingebunden werden 
+    \item Redundante Verbreitung von Informationen, die die Nachverfolgbarkeit erschwert
+  \end{enumerate}
+
+	\subsection{Projektbewertung}
+  Das Vorhaben zur Lösung der beschriebenen Probleme ist speziell auf die internen Anforderungen und Rahmenbedingungen der HZD abgestimmt 
+  und weist einen klar definierten zeitlichen Rahmen auf. Außerdem soll das Vorhaben in einem fixen Personenkreis bearbeitet werden.
+  Damit erfüllt es die formelle Definition eines Projekts als ein einmaliges, zeitlich begrenztes und individuelles Vorhaben,
+  welches von einem projektspezifisch organisiertem Perosnenkreis bearbeitet wird \cite{bronimann_projektmanagement_2022}. 
+  Da das Projekt darauf abzielt, einen bestehenden Prozess zu analysieren und durch konkrete Maßnahmen zu verbessern, 
+  handelt es sich um ein typisches Prozessoptimierungsprojekt \cite[S.~8]{kuster_handbuch_2022}. Die Kombination aus Problemanalyse und Umsetzung 
+  gezielter Verbesserungen entspricht den Merkmalen dieser Projektkategorie. \\
+
+  Die entstehenden Kosten belaufen sich auf die reinen Personalkosten, da keine spezifischen Mittel oder Infrastruktur benötigt werden. Der entstehende
+  Nutzen durch eine reibungslosere Kommunikation könnte eine allgemeine gesteigerte Effizient bei der Umsetzung von Projekten in der Abteilung sein.
 	
 	\subsection{Ziele}
 	Das Projekt verfolgt zwei Ziele, wobei das zweite Ziel vom ersten Ziel abhängig ist.
 	Das erste Ziel ist eine Empfehlung für eine Softwarelösung, mit der die Zusammenarbeit innerhalb eines Projekt- oder Verfahrens-Teams verbessert werden soll, insbesondere bei einer Aufteilung des Teams in Mitarbeiter, die vor Ort im Büro arbeiten und in Mitarbeiter, die per mobilem Arbeiten von zuhause aus arbeiten und somit nicht persönlich im Büro erreichbar sind, abzugeben.\\
 	Dafür soll eine Evaluation verschiedener Softwarelösung angestellt und anschließend ausgewertet werden, sodass die Empfehlung transparent nachvollzogen werden kann.\\
 	Das zweite Ziel ist die Erstellung und Dokumentation eines Proof of Concept, bei dem die das erste Ziel darstellende Softwarelösung eingesetzt und so konfiguriert wird, dass sie für den Bereich J3 eingesetzt werden kann. Ergebnis davon soll die Dokumentation in Form eines Wikis sowie eine Konfigurationsanleitung sein, die eine Nachbildung des Proof of Concept ermöglicht.
+
+  \subsection{Stakeholderanalyse}
 	
 	
 	\subsection{Projektauftrag}
